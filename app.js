@@ -167,6 +167,12 @@ app.delete("/deleteFile/:userId", async (req, res) => {
   }
 });
 
+app.get("test", (req, res) => {
+  res
+    .status(200)
+    .json(returnSuccess(null, true, "Text data fetched successfully", 200));
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
